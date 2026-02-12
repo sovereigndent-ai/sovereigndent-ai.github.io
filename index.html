@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SovereignDent AI — Your AI Dental Receptionist</title>
+  <meta name="description" content="Never miss a patient call again. SovereignDent AI is an on-premise AI receptionist that answers phones, books appointments, and handles patient inquiries 24/7.">
+  <meta property="og:title" content="SovereignDent AI — Your AI Dental Receptionist">
+  <meta property="og:description" content="On-premise AI receptionist for dental practices. Answers calls, books appointments, 24/7.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- ==================== Navigation ==================== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="nav-logo-icon">&#129463;</span>
+        SovereignDent AI
+      </a>
+      <div class="nav-links">
+        <a href="#solution" class="nav-link">Features</a>
+        <a href="#voices" class="nav-link">Voices</a>
+        <a href="#demo" class="nav-link">Demo</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#cta" class="btn btn-primary btn-sm nav-cta">Get Started</a>
+      </div>
+      <button class="nav-mobile-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav-mobile">
+    <a href="#solution" class="nav-link">Features</a>
+    <a href="#voices" class="nav-link">Voices</a>
+    <a href="#demo" class="nav-link">Demo</a>
+    <a href="#pricing" class="nav-link">Pricing</a>
+    <a href="#faq" class="nav-link">FAQ</a>
+    <a href="#cta" class="btn btn-primary">Get Started</a>
+  </div>
+
+  <!-- ==================== Hero ==================== -->
+  <section id="hero" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="container hero-content">
+      <span class="badge badge-accent hero-badge">On-Premise AI &mdash; Your Data Never Leaves Your Office</span>
+      <h1>Never Miss a<br>Patient Call <span class="text-gradient">Again</span></h1>
+      <p class="hero-description">
+        Susie is your AI dental receptionist. She answers every call and books appointments
+        &mdash; 24 hours a day, 7 days a week, running entirely on hardware you own.
+        Practices using 24/7 AI receptionists report 15&ndash;25% more patient bookings*
+        and capture up to 85% of previously missed calls.
+      </p>
+      <p style="font-size:var(--font-size-xs);color:var(--text-muted);margin-top:var(--space-2);max-width:560px;">
+        *Based on industry data reported by <a href="https://www.tensorlinks.com/blog/ai-dental-receptionist-trends-2025/" target="_blank" rel="noopener" style="color:var(--text-muted);text-decoration:underline;">TensorLinks (2025)</a> across dental practices using AI receptionists.
+      </p>
+      <div class="hero-buttons">
+        <a href="#demo" class="btn btn-accent btn-lg">Try Live Demo</a>
+        <a href="#pricing" class="btn btn-outline btn-lg">See Pricing</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-value">24/7</div>
+          <div class="hero-stat-label">Always Available</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">&lt;1.5s</div>
+          <div class="hero-stat-label">Response Time</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">100%</div>
+          <div class="hero-stat-label">On-Premise</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">HIPAA</div>
+          <div class="hero-stat-label">Compliant</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Problem ==================== -->
+  <section id="problem" class="section problem">
+    <div class="container text-center">
+      <span class="section-label reveal">The Problem</span>
+      <h2 class="section-title reveal">Every Missed Call Is a Missed Patient</h2>
+      <p class="section-subtitle reveal" style="margin-left:auto;margin-right:auto;">
+        Dental practices lose thousands of dollars every month to unanswered phones.
+      </p>
+      <div class="problem-grid">
+        <div class="card problem-card reveal">
+          <div class="problem-card-icon">&#128222;</div>
+          <div class="problem-card-stat text-red">34%</div>
+          <div class="problem-card-title">Calls Go Unanswered</div>
+          <div class="problem-card-desc">Over a third of calls to dental offices go to voicemail during peak hours.</div>
+        </div>
+        <div class="card problem-card reveal">
+          <div class="problem-card-icon">&#128176;</div>
+          <div class="problem-card-stat text-yellow">$150K+</div>
+          <div class="problem-card-title">Revenue Lost Per Year</div>
+          <div class="problem-card-desc">Each missed new patient call represents $800-$1,200 in lifetime value.</div>
+        </div>
+        <div class="card problem-card reveal">
+          <div class="problem-card-icon">&#128104;&#8205;&#9877;&#65039;</div>
+          <div class="problem-card-stat text-blue">67%</div>
+          <div class="problem-card-title">Call Another Office</div>
+          <div class="problem-card-desc">Two thirds of patients who can't reach you will book elsewhere.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Solution ==================== -->
+  <section id="solution" class="section">
+    <div class="container">
+      <span class="section-label reveal">The Solution</span>
+      <h2 class="section-title reveal">Meet <span class="text-gradient">Susie</span>, Your AI Receptionist</h2>
+      <p class="section-subtitle reveal">
+        A warm, natural-sounding voice that handles everything your front desk does &mdash; without the hold times.
+      </p>
+      <div class="solution-grid">
+        <div class="card solution-card reveal">
+          <div class="solution-card-icon">&#128197;</div>
+          <h3 class="solution-card-title">Smart Scheduling</h3>
+          <p class="solution-card-desc">Books, reschedules, and cancels appointments directly in your PMS. Understands complex requests like "next available Tuesday morning."</p>
+        </div>
+        <div class="card solution-card reveal">
+          <div class="solution-card-icon">&#128172;</div>
+          <h3 class="solution-card-title">Patient FAQ</h3>
+          <p class="solution-card-desc">Answers questions about insurance, procedures, office hours, directions, and policies using your practice's actual information.</p>
+        </div>
+        <div class="card solution-card reveal">
+          <div class="solution-card-icon">&#127973;</div>
+          <h3 class="solution-card-title">Emergency Triage</h3>
+          <p class="solution-card-desc">Identifies urgent dental situations, provides immediate guidance, and escalates to on-call staff when clinically necessary.</p>
+        </div>
+        <div class="card solution-card reveal">
+          <div class="solution-card-icon">&#128274;</div>
+          <h3 class="solution-card-title">HIPAA Compliant</h3>
+          <p class="solution-card-desc">All data stays on your hardware. AES-256 encryption, audit logging, PHI detection, and BAA included. Zero cloud dependencies.</p>
+        </div>
+        <div class="card solution-card reveal">
+          <div class="solution-card-icon">&#127897;&#65039;</div>
+          <h3 class="solution-card-title">Natural Voice</h3>
+          <p class="solution-card-desc">Patients often can't tell they're talking to AI. Choose from 10 professional voice personas tailored for dental practices.</p>
+        </div>
+        <div class="card solution-card reveal">
+          <div class="solution-card-icon">&#128257;</div>
+          <h3 class="solution-card-title">Smart Escalation</h3>
+          <p class="solution-card-desc">Detects confusion, frustration, or complex situations and seamlessly transfers to your staff with full context of the conversation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Privacy Advantage ==================== -->
+  <section id="privacy" class="section" style="background:linear-gradient(135deg, rgba(16,185,129,0.05), rgba(6,182,212,0.05));">
+    <div class="container text-center">
+      <span class="section-label reveal">Why On-Premise Matters</span>
+      <h2 class="section-title reveal">Your Patient Data <span class="text-gradient">Never Leaves Your Office</span></h2>
+      <p class="section-subtitle reveal" style="margin-left:auto;margin-right:auto;">
+        Every other dental AI sends patient calls to the cloud. SovereignDent AI runs 100% on hardware in your building.
+      </p>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-8);max-width:900px;margin:0 auto;">
+        <div class="card reveal" style="border-color:var(--success);text-align:left;">
+          <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-4);">
+            <span style="font-size:var(--font-size-2xl);color:var(--success);">&#9989;</span>
+            <h3 style="font-size:var(--font-size-xl);font-weight:700;color:var(--success);">SovereignDent AI</h3>
+          </div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-3);">
+            <li style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--font-size-sm);color:var(--text-secondary);"><span style="color:var(--success);flex-shrink:0;">&#10003;</span> All processing on your hardware</li>
+            <li style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--font-size-sm);color:var(--text-secondary);"><span style="color:var(--success);flex-shrink:0;">&#10003;</span> Zero patient data in the cloud</li>
+            <li style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--font-size-sm);color:var(--text-secondary);"><span style="color:var(--success);flex-shrink:0;">&#10003;</span> No third-party data sharing</li>
+            <li style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--font-size-sm);color:var(--text-secondary);"><span style="color:var(--success);flex-shrink:0;">&#10003;</span> Minimal PHI breach risk</li>
+            <li style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--font-size-sm);color:var(--text-secondary);"><span style="color:var(--success);flex-shrink:0;">&#10003;</span> You control your data &mdash; always</li>
+            <li style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--font-size-sm);color:var(--text-secondary);"><span style="color:var(--success);flex-shrink:0;">&#10003;</span> BAA included, AES-256 encryption</li>
+          </ul>
+        </div>
+        <div class="card reveal" style="border-color:var(--error);text-align:left;opacity:0.85;">
+          <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-4);">
+            <span style="font-size:var(--font-size-2xl);color:var(--error);">&#9888;&#65039;</span>
+            <h3 style="font-size:var(--font-size-xl);font-weight:700;color:var(--error);">Cloud-Based Competitors</h3>
+          </div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-3);">
+            <li style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--font-size-sm);color:var(--text-secondary);"><span style="color:var(--error);flex-shrink:0;">&#10007;</span> Patient calls sent to cloud servers</li>
+            <li style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--font-size-sm);color:var(--text-secondary);"><span style="color:var(--error);flex-shrink:0;">&#10007;</span> PHI stored on third-party infrastructure</li>
+            <li style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--font-size-sm);color:var(--text-secondary);"><span style="color:var(--error);flex-shrink:0;">&#10007;</span> Data may be used to train AI models</li>
+            <li style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--font-size-sm);color:var(--text-secondary);"><span style="color:var(--error);flex-shrink:0;">&#10007;</span> Higher risk of data breach</li>
+            <li style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--font-size-sm);color:var(--text-secondary);"><span style="color:var(--error);flex-shrink:0;">&#10007;</span> Vendor controls your data</li>
+            <li style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--font-size-sm);color:var(--text-secondary);"><span style="color:var(--error);flex-shrink:0;">&#10007;</span> Per-minute fees add up fast</li>
+          </ul>
+        </div>
+      </div>
+      <p class="reveal" style="margin-top:var(--space-8);font-size:var(--font-size-lg);color:var(--success);font-weight:600;">
+        Safer for your practice. Safer for your patients.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== Voice Gallery ==================== -->
+  <section id="voices" class="section voices">
+    <div class="container">
+      <span class="section-label reveal">Voice Gallery</span>
+      <h2 class="section-title reveal">Choose Susie's <span class="text-gradient">Voice</span></h2>
+      <p class="section-subtitle reveal">
+        10 professional voice personas designed for dental practices. Warm, professional, and patient-friendly.
+      </p>
+
+      <div class="voice-filters reveal">
+        <button class="voice-filter-btn active" data-filter="all">All Voices</button>
+        <button class="voice-filter-btn" data-filter="professional">Professional</button>
+        <button class="voice-filter-btn" data-filter="pediatric">Pediatric</button>
+        <button class="voice-filter-btn" data-filter="luxury">Luxury</button>
+        <button class="voice-filter-btn" data-filter="bilingual">Bilingual</button>
+        <button class="voice-filter-btn" data-filter="medical">Medical</button>
+      </div>
+
+      <div class="voice-grid">
+        <!-- Voice 1: Susie Classic -->
+        <div class="card voice-card reveal" data-category="professional" data-name="Susie Classic" data-role="The Original — Warm &amp; Professional" data-sample="Good morning! Thank you for calling BrightSmile Dental. This is Susie. How may I help you today?" data-emoji="&#128105;" data-audio="audio/voices/susie-classic.mp3">
+          <div class="voice-card-header">
+            <div class="voice-avatar">&#128105;</div>
+            <div class="voice-card-info">
+              <h3>Susie Classic</h3>
+              <p>Warm &amp; Professional</p>
+            </div>
+            <button class="voice-play-btn" aria-label="Play sample">&#9654;</button>
+          </div>
+          <div class="voice-card-tags">
+            <span class="voice-tag">Professional</span>
+            <span class="voice-tag">Female</span>
+            <span class="voice-tag">English</span>
+          </div>
+          <p class="voice-card-sample">"Good morning! Thank you for calling BrightSmile Dental. How may I help you today?"</p>
+        </div>
+
+        <!-- Voice 2: Grace -->
+        <div class="card voice-card reveal" data-category="medical" data-name="Grace" data-role="Calm &amp; Knowledgeable" data-sample="I understand your concern about the procedure. Let me explain exactly what to expect during your visit." data-emoji="&#128105;" data-audio="audio/voices/grace.mp3">
+          <div class="voice-card-header">
+            <div class="voice-avatar">&#128105;&#8205;&#9877;&#65039;</div>
+            <div class="voice-card-info">
+              <h3>Grace</h3>
+              <p>Calm &amp; Knowledgeable</p>
+            </div>
+            <button class="voice-play-btn" aria-label="Play sample">&#9654;</button>
+          </div>
+          <div class="voice-card-tags">
+            <span class="voice-tag">Medical</span>
+            <span class="voice-tag">Female</span>
+            <span class="voice-tag">English</span>
+          </div>
+          <p class="voice-card-sample">"I understand your concern. Let me explain exactly what to expect during your visit."</p>
+        </div>
+
+        <!-- Voice 3: Sunny -->
+        <div class="card voice-card reveal" data-category="pediatric" data-name="Sunny" data-role="Pediatric Specialist" data-sample="Hey there! Are you ready for your super-fun checkup? Dr. Smith can't wait to count all your awesome teeth!" data-emoji="&#127774;" data-audio="audio/voices/sunny.mp3">
+          <div class="voice-card-header">
+            <div class="voice-avatar">&#127774;</div>
+            <div class="voice-card-info">
+              <h3>Sunny</h3>
+              <p>Pediatric Specialist</p>
+            </div>
+            <button class="voice-play-btn" aria-label="Play sample">&#9654;</button>
+          </div>
+          <div class="voice-card-tags">
+            <span class="voice-tag">Pediatric</span>
+            <span class="voice-tag">Female</span>
+            <span class="voice-tag">Energetic</span>
+          </div>
+          <p class="voice-card-sample">"Hey there! Are you ready for your super-fun checkup? Dr. Smith can't wait to see you!"</p>
+        </div>
+
+        <!-- Voice 4: James -->
+        <div class="card voice-card reveal" data-category="professional" data-name="James" data-role="Distinguished &amp; Reassuring" data-sample="Thank you for your call. I'd be happy to help you find a convenient appointment time this week." data-emoji="&#128104;" data-audio="audio/voices/james.mp3">
+          <div class="voice-card-header">
+            <div class="voice-avatar">&#128104;</div>
+            <div class="voice-card-info">
+              <h3>James</h3>
+              <p>Distinguished &amp; Reassuring</p>
+            </div>
+            <button class="voice-play-btn" aria-label="Play sample">&#9654;</button>
+          </div>
+          <div class="voice-card-tags">
+            <span class="voice-tag">Professional</span>
+            <span class="voice-tag">Male</span>
+            <span class="voice-tag">English</span>
+          </div>
+          <p class="voice-card-sample">"Thank you for your call. I'd be happy to help you find a convenient appointment time."</p>
+        </div>
+
+        <!-- Voice 5: Sophia — REMOVED (wrong sex on reference voice, fix later) -->
+
+        <!-- Voice 6: Maria -->
+        <div class="card voice-card reveal" data-category="bilingual" data-name="Maria" data-role="Bilingual (English/Spanish)" data-sample="Buenos dias! Thank you for calling. I can help you in English or Spanish, whatever you prefer." data-emoji="&#127758;" data-audio="audio/voices/maria.mp3">
+          <div class="voice-card-header">
+            <div class="voice-avatar">&#127758;</div>
+            <div class="voice-card-info">
+              <h3>Maria</h3>
+              <p>Bilingual EN/ES</p>
+            </div>
+            <button class="voice-play-btn" aria-label="Play sample">&#9654;</button>
+          </div>
+          <div class="voice-card-tags">
+            <span class="voice-tag">Bilingual</span>
+            <span class="voice-tag">Female</span>
+            <span class="voice-tag">Spanish</span>
+          </div>
+          <p class="voice-card-sample">"Buenos dias! I can help you in English or Spanish, whatever you prefer."</p>
+        </div>
+
+        <!-- Voice 7: Buddy -->
+        <div class="card voice-card reveal" data-category="pediatric" data-name="Buddy" data-role="Kid-Friendly &amp; Fun" data-sample="Hi friend! Guess what? Dr. Chen has some really cool new stickers for brave kids like you!" data-emoji="&#129409;" data-audio="audio/voices/buddy.mp3">
+          <div class="voice-card-header">
+            <div class="voice-avatar">&#129409;</div>
+            <div class="voice-card-info">
+              <h3>Buddy</h3>
+              <p>Kid-Friendly &amp; Fun</p>
+            </div>
+            <button class="voice-play-btn" aria-label="Play sample">&#9654;</button>
+          </div>
+          <div class="voice-card-tags">
+            <span class="voice-tag">Pediatric</span>
+            <span class="voice-tag">Male</span>
+            <span class="voice-tag">Playful</span>
+          </div>
+          <p class="voice-card-sample">"Hi friend! Guess what? Dr. Chen has some really cool new stickers for brave kids!"</p>
+        </div>
+
+        <!-- Voice 8: Olivia -->
+        <div class="card voice-card reveal" data-category="professional" data-name="Olivia" data-role="Modern &amp; Efficient" data-sample="I have you down for a cleaning next Tuesday at 10 AM with Dr. Johnson. Shall I send a confirmation text?" data-emoji="&#128187;" data-audio="audio/voices/olivia.mp3">
+          <div class="voice-card-header">
+            <div class="voice-avatar">&#128187;</div>
+            <div class="voice-card-info">
+              <h3>Olivia</h3>
+              <p>Modern &amp; Efficient</p>
+            </div>
+            <button class="voice-play-btn" aria-label="Play sample">&#9654;</button>
+          </div>
+          <div class="voice-card-tags">
+            <span class="voice-tag">Professional</span>
+            <span class="voice-tag">Female</span>
+            <span class="voice-tag">Efficient</span>
+          </div>
+          <p class="voice-card-sample">"You're all set for a cleaning next Tuesday at 10 AM. Shall I send a confirmation?"</p>
+        </div>
+
+        <!-- Voice 9: Marcus -->
+        <div class="card voice-card reveal" data-category="medical" data-name="Marcus" data-role="Oral Surgery Specialist" data-sample="I want to make sure you have all the pre-operative information. Let me walk you through your preparation steps." data-emoji="&#129656;" data-audio="audio/voices/marcus.mp3">
+          <div class="voice-card-header">
+            <div class="voice-avatar">&#129656;</div>
+            <div class="voice-card-info">
+              <h3>Marcus</h3>
+              <p>Oral Surgery Specialist</p>
+            </div>
+            <button class="voice-play-btn" aria-label="Play sample">&#9654;</button>
+          </div>
+          <div class="voice-card-tags">
+            <span class="voice-tag">Medical</span>
+            <span class="voice-tag">Male</span>
+            <span class="voice-tag">Surgical</span>
+          </div>
+          <p class="voice-card-sample">"Let me walk you through your pre-operative preparation steps so you're all set."</p>
+        </div>
+
+        <!-- Voice 10: Elena -->
+        <div class="card voice-card reveal" data-category="luxury" data-name="Elena" data-role="Cosmetic Specialist" data-sample="I'd love to help you explore our smile transformation packages. We have some beautiful options for veneers and whitening." data-emoji="&#10024;" data-audio="audio/voices/elena.mp3">
+          <div class="voice-card-header">
+            <div class="voice-avatar">&#10024;</div>
+            <div class="voice-card-info">
+              <h3>Elena</h3>
+              <p>Cosmetic Specialist</p>
+            </div>
+            <button class="voice-play-btn" aria-label="Play sample">&#9654;</button>
+          </div>
+          <div class="voice-card-tags">
+            <span class="voice-tag">Luxury</span>
+            <span class="voice-tag">Female</span>
+            <span class="voice-tag">Cosmetic</span>
+          </div>
+          <p class="voice-card-sample">"I'd love to help you explore our smile transformation packages."</p>
+        </div>
+      </div>
+      <p style="text-align:center; margin-top:2.5rem; color:var(--text-muted); font-size:1rem; letter-spacing:0.02em;">More voices coming soon</p>
+    </div>
+  </section>
+
+  <!-- Voice Player Modal -->
+  <div class="voice-player-overlay" role="dialog" aria-modal="true" aria-label="Voice sample player">
+    <div class="voice-player" style="position:relative;">
+      <button class="voice-player-close" aria-label="Close player">&times;</button>
+      <div class="voice-player-avatar"></div>
+      <div class="voice-player-name"></div>
+      <div class="voice-player-role"></div>
+      <div class="voice-player-waveform"></div>
+      <div class="voice-player-controls">
+        <button class="voice-player-play" aria-label="Play">&#9654;</button>
+      </div>
+      <p class="voice-player-sample-text"></p>
+    </div>
+  </div>
+
+  <!-- ==================== Live Demo ==================== -->
+  <section id="demo" class="section demo">
+    <div class="demo-glow"></div>
+    <div class="container demo-content">
+      <span class="badge badge-accent demo-badge reveal">Live &mdash; Try It Now</span>
+      <h2 class="reveal">Talk to Susie <span class="text-gradient">Right Now</span></h2>
+      <p class="demo-subtitle reveal">
+        Click the button below to start a live conversation with Susie.
+        She's running on real hardware, in real-time, with no cloud services.
+      </p>
+      <div class="reveal">
+        <a href="https://combo-underwear-justice-forth.trycloudflare.com" target="_blank" rel="noopener" class="demo-call-btn" id="demoCallBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Susie Now
+        </a>
+      </div>
+      <div class="demo-info reveal">
+        <span class="demo-info-item">
+          <span class="demo-info-icon">&#10003;</span>
+          No sign-up required
+        </span>
+        <span class="demo-info-item">
+          <span class="demo-info-icon">&#10003;</span>
+          Works on any browser
+        </span>
+        <span class="demo-info-item">
+          <span class="demo-info-icon">&#10003;</span>
+          Real AI, not scripted
+        </span>
+        <span class="demo-info-item">
+          <span class="demo-info-icon">&#10003;</span>
+          No data stored
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Demo Conversations ==================== -->
+  <section id="conversations" class="section conversations">
+    <div class="container">
+      <span class="section-label reveal">Hear It In Action</span>
+      <h2 class="section-title reveal">Sample <span class="text-gradient">Conversations</span></h2>
+      <p class="section-subtitle reveal">
+        Listen to real examples of Susie handling common dental office calls.
+      </p>
+      <div class="conversation-grid">
+        <!-- Conversation 1 -->
+        <div class="card conversation-card reveal">
+          <div class="conversation-card-header">
+            <span class="conversation-card-title">New Patient Booking</span>
+            <span class="conversation-card-duration">1:45</span>
+          </div>
+          <p class="conversation-card-desc">A new patient calls to schedule their first cleaning and asks about accepted insurance plans.</p>
+          <div class="conversation-player" data-duration="105">
+            <button class="conversation-play-btn" aria-label="Play conversation">&#9654;</button>
+            <div class="conversation-progress"><div class="conversation-progress-bar"></div></div>
+            <span class="conversation-time">1:45</span>
+          </div>
+        </div>
+        <!-- Conversation 2 -->
+        <div class="card conversation-card reveal">
+          <div class="conversation-card-header">
+            <span class="conversation-card-title">Emergency Triage</span>
+            <span class="conversation-card-duration">2:10</span>
+          </div>
+          <p class="conversation-card-desc">A patient calls with a broken tooth and severe pain. Susie assesses urgency and provides immediate guidance.</p>
+          <div class="conversation-player" data-duration="130">
+            <button class="conversation-play-btn" aria-label="Play conversation">&#9654;</button>
+            <div class="conversation-progress"><div class="conversation-progress-bar"></div></div>
+            <span class="conversation-time">2:10</span>
+          </div>
+        </div>
+        <!-- Conversation 3 -->
+        <div class="card conversation-card reveal">
+          <div class="conversation-card-header">
+            <span class="conversation-card-title">Appointment Reschedule</span>
+            <span class="conversation-card-duration">1:20</span>
+          </div>
+          <p class="conversation-card-desc">An existing patient needs to move their appointment to next week. Susie finds available slots instantly.</p>
+          <div class="conversation-player" data-duration="80">
+            <button class="conversation-play-btn" aria-label="Play conversation">&#9654;</button>
+            <div class="conversation-progress"><div class="conversation-progress-bar"></div></div>
+            <span class="conversation-time">1:20</span>
+          </div>
+        </div>
+        <!-- Conversation 4 -->
+        <div class="card conversation-card reveal">
+          <div class="conversation-card-header">
+            <span class="conversation-card-title">Insurance Question</span>
+            <span class="conversation-card-duration">1:30</span>
+          </div>
+          <p class="conversation-card-desc">A caller asks whether their Delta Dental plan covers wisdom tooth extraction and what their copay might be.</p>
+          <div class="conversation-player" data-duration="90">
+            <button class="conversation-play-btn" aria-label="Play conversation">&#9654;</button>
+            <div class="conversation-progress"><div class="conversation-progress-bar"></div></div>
+            <span class="conversation-time">1:30</span>
+          </div>
+        </div>
+        <!-- Conversation 5 -->
+        <div class="card conversation-card reveal">
+          <div class="conversation-card-header">
+            <span class="conversation-card-title">After-Hours Call</span>
+            <span class="conversation-card-duration">1:55</span>
+          </div>
+          <p class="conversation-card-desc">A patient calls at 9 PM with a question. Susie handles it, books a morning appointment, and sends confirmation.</p>
+          <div class="conversation-player" data-duration="115">
+            <button class="conversation-play-btn" aria-label="Play conversation">&#9654;</button>
+            <div class="conversation-progress"><div class="conversation-progress-bar"></div></div>
+            <span class="conversation-time">1:55</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== How It Works ==================== -->
+  <section id="how-it-works" class="section">
+    <div class="container text-center">
+      <span class="section-label reveal">How It Works</span>
+      <h2 class="section-title reveal">Up and Running in <span class="text-gradient">3 Steps</span></h2>
+      <p class="section-subtitle reveal" style="margin-left:auto;margin-right:auto;">
+        We handle the technology. You focus on patients.
+      </p>
+      <div class="how-it-works-grid">
+        <div class="step-card reveal">
+          <div class="step-number">1</div>
+          <h3>We Install the Hardware</h3>
+          <p>A small, quiet server goes in your office. We configure it with your practice details, hours, procedures, and insurance information.</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-number">2</div>
+          <h3>Connect Your Phones</h3>
+          <p>We integrate with your existing phone system and PMS. Calls route to Susie first, with seamless transfer to staff when needed.</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-number">3</div>
+          <h3>Susie Answers Calls</h3>
+          <p>Patients call and Susie answers &mdash; booking appointments, answering questions, and handling emergencies around the clock.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Pricing ==================== -->
+  <section id="pricing" class="section">
+    <div class="container text-center">
+      <span class="section-label reveal">Pricing</span>
+      <h2 class="section-title reveal">Simple, Transparent <span class="text-gradient">Pricing</span></h2>
+      <p class="section-subtitle reveal" style="margin-left:auto;margin-right:auto;">
+        No per-call fees. No hidden costs. No cloud subscriptions. Just one monthly price.
+      </p>
+
+      <div class="pricing-toggle reveal">
+        <span class="pricing-toggle-label pricing-label-monthly active">Monthly</span>
+        <div class="pricing-toggle-switch" role="switch" aria-label="Toggle annual pricing" tabindex="0"></div>
+        <span class="pricing-toggle-label pricing-label-annual">Annual</span>
+        <span class="pricing-save-badge">Save 17%</span>
+      </div>
+
+      <div class="pricing-grid" style="grid-template-columns:repeat(2,1fr);max-width:900px;margin:0 auto;">
+        <!-- Single Office -->
+        <div class="card pricing-card featured reveal">
+          <div class="pricing-card-name">Single Office</div>
+          <p class="pricing-card-desc">Everything you need &mdash; one office, any size</p>
+          <div class="pricing-card-price">
+            <span class="pricing-amount">$999</span>
+            <span class="pricing-period">/month</span>
+          </div>
+          <p class="pricing-yearly-note" style="font-size:var(--font-size-sm);color:var(--text-muted);margin-top:calc(-1 * var(--space-4));margin-bottom:var(--space-6);">$11,988/year at monthly rate</p>
+          <div class="pricing-card-features">
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span><strong>Dedicated GPU server included</strong> &mdash; installed in your office</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>Up to 4 simultaneous calls</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>Unlimited calls &mdash; zero per-minute fees</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>Appointment scheduling &amp; rescheduling</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>PMS integration (Dentrix, OpenDental, Eaglesoft)</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>Patient FAQ &amp; insurance questions</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>Emergency triage &amp; smart escalation</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>All 10 voice personas</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>Analytics dashboard</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span><strong>100% on-premise &mdash; zero patient data in the cloud</strong></span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>HIPAA compliant with BAA included</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>Priority support &amp; custom voice tuning</span>
+            </div>
+          </div>
+          <a href="#cta" class="btn btn-primary">Get Started</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="card pricing-card pricing-enterprise reveal">
+          <div class="pricing-card-name">Enterprise / DSO</div>
+          <p class="pricing-card-desc">Multi-location groups &amp; dental service organizations</p>
+          <div class="pricing-card-price">
+            <span class="pricing-amount">Custom</span>
+            <span class="pricing-period">&nbsp;</span>
+          </div>
+          <p style="font-size:var(--font-size-sm);color:var(--text-muted);margin-bottom:var(--space-6);">Volume pricing for 2+ locations</p>
+          <div class="pricing-card-features">
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>Everything in Single Office</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>Unlimited locations &amp; lines</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>Central management dashboard</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>Cross-location call routing</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>White-label branding</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>Custom PMS integration</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>Dedicated support engineer</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span>SLA guarantee (99.9%)</span>
+            </div>
+            <div class="pricing-feature">
+              <span class="pricing-feature-icon">&#10003;</span>
+              <span><strong>Volume discounts &mdash; per-office rate decreases with scale</strong></span>
+            </div>
+          </div>
+          <a href="#cta" class="btn btn-outline">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section id="faq" class="section faq">
+    <div class="container text-center">
+      <span class="section-label reveal">FAQ</span>
+      <h2 class="section-title reveal">Common <span class="text-gradient">Questions</span></h2>
+      <p class="section-subtitle reveal" style="margin-left:auto;margin-right:auto;">
+        Everything you need to know about SovereignDent AI.
+      </p>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>Will patients know they're talking to AI?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Susie is designed to sound natural and conversational. Most patients don't realize they're talking to AI unless told. However, we recommend transparent disclosure at the start of each call &mdash; both for ethical reasons and legal compliance. Susie can say something like "Hi, I'm Susie, BrightSmile's AI assistant" at the beginning of every call.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>Is my patient data safe?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Absolutely. SovereignDent AI runs entirely on hardware in your office. No data goes to any cloud service, ever. We provide AES-256 encryption, tamper-proof audit logging, PHI detection and redaction, and a signed Business Associate Agreement (BAA). Your data never leaves your building.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>What happens if Susie can't handle a call?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Susie has smart escalation built in. If she detects confusion, frustration, a complex medical situation, or the caller specifically asks for a human, she seamlessly transfers the call to your staff with a full summary of the conversation so far. Your team always stays in control.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>Which practice management systems are supported?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              We currently support Dentrix, OpenDental, Eaglesoft, and Curve Dental. Our universal adapter makes it straightforward to add new PMS integrations. If you use a different system, contact us &mdash; we're adding new integrations regularly.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>How long does installation take?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Typically 2-4 hours for hardware setup and initial configuration, followed by a 2-hour staff training session. We customize Susie with your practice's specific information, hours, procedures, and insurance details during setup. Most practices are live within one business day.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>What kind of hardware is required?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              We provide a small, quiet server with an NVIDIA GPU that sits in your office. It needs a standard power outlet and an internet connection (50+ Mbps recommended). The server is about the size of a small desktop computer and produces minimal noise and heat.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>Can Susie handle multiple calls at once?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Yes. Every office gets a dedicated GPU server that handles up to 4 simultaneous calls out of the box. Susie processes each call independently, so multiple patients can be helped at the same time without any degradation in quality or speed. Enterprise plans support unlimited lines across locations.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>Is there a contract or commitment?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Monthly plans are $999/month with no long-term commitment &mdash; cancel anytime with 30 days notice. Annual plans are $833/month ($9,996 billed yearly), saving you $1,992 per year. We also offer a 90-day beta program where you can try Susie at no cost to see if she's right for your practice.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA ==================== -->
+  <section id="cta" class="section cta">
+    <div class="cta-glow"></div>
+    <div class="container cta-content">
+      <span class="badge badge-primary reveal">Limited Beta Spots Available</span>
+      <h2 class="reveal" style="margin-top:var(--space-4);">Ready to Stop Missing <span class="text-gradient">Patient Calls</span>?</h2>
+      <p class="cta-subtitle reveal">
+        Join our beta program and try Susie free for 90 days. No credit card required.
+        Hardware and setup included.
+      </p>
+      <div class="cta-buttons reveal">
+        <a href="mailto:hello@sovereigndent.ai?subject=Beta%20Program%20Interest" class="btn btn-primary btn-lg">Apply for Beta</a>
+        <a href="#demo" class="btn btn-outline btn-lg">Try the Demo First</a>
+      </div>
+      <div class="cta-trust reveal">
+        <span class="cta-trust-item">
+          <span>&#128274;</span> HIPAA Compliant
+        </span>
+        <span class="cta-trust-item">
+          <span>&#127968;</span> 100% On-Premise
+        </span>
+        <span class="cta-trust-item">
+          <span>&#128222;</span> 24/7 Availability
+        </span>
+        <span class="cta-trust-item">
+          <span>&#9733;</span> 90-Day Free Trial
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-brand-icon">&#129463;</span>
+        <span class="footer-brand-name">SovereignDent AI</span>
+      </div>
+      <div class="footer-links">
+
+        <a href="#solution" class="footer-link">Features</a>
+        <a href="#voices" class="footer-link">Voices</a>
+        <a href="#pricing" class="footer-link">Pricing</a>
+        <a href="#faq" class="footer-link">FAQ</a>
+        <a href="mailto:hello@sovereigndent.ai" class="footer-link">Contact</a>
+      </div>
+      <div class="footer-copy">&copy; 2026 SovereignDent AI, LLC. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

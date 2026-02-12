@@ -1,0 +1,5 @@
+*.wav
+*.log
+deploy.sh
+CLOUDFLARE_TUNNEL_SETUP.md
+DEPLOYMENT_STEPS.md
