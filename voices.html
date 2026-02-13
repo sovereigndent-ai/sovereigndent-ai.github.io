@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Library — SovereignDent AI</title>
+  <meta name="description" content="Browse 54+ natural AI voices in 10 languages. Choose the perfect voice for your dental practice's AI receptionist.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #4F46E5; --accent: #06B6D4; --dark: #0F172A; --dark-lighter: #1E293B;
+      --card-bg: #1a2236; --text: #E2E8F0; --text-muted: #94A3B8; --success: #10B981;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--dark); color: var(--text); line-height: 1.6; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .top-bar { background: var(--dark-lighter); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(12px); }
+    .top-bar h1 { font-size: 1.1rem; font-weight: 700; }
+    .top-bar h1 span { background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .back-link { font-size: 0.9rem; font-weight: 500; display: flex; align-items: center; gap: 0.4rem; }
+
+    .hero { text-align: center; padding: 3rem 2rem 1.5rem; }
+    .hero h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 0.75rem; }
+    .hero h2 span { background: linear-gradient(135deg, var(--primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { color: var(--text-muted); max-width: 600px; margin: 0 auto; font-size: 1.05rem; }
+
+    .stats { display: flex; justify-content: center; gap: 2.5rem; padding: 1.5rem 2rem 2rem; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-num { font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--success)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .stat-label { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+    .filters { display: flex; justify-content: center; gap: 0.5rem; padding: 0 2rem 2rem; flex-wrap: wrap; }
+    .filter-btn { background: var(--dark-lighter); border: 1px solid rgba(255,255,255,0.08); color: var(--text-muted); padding: 0.5rem 1.1rem; border-radius: 99px; cursor: pointer; font-size: 0.85rem; font-weight: 500; transition: all 0.2s; }
+    .filter-btn:hover, .filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+    .lang-section { max-width: 1100px; margin: 0 auto 2.5rem; padding: 0 2rem; }
+    .lang-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .lang-flag { font-size: 1.6rem; }
+    .lang-name { font-size: 1.3rem; font-weight: 700; }
+    .lang-count { background: var(--dark-lighter); color: var(--text-muted); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 99px; font-weight: 600; }
+
+    .voice-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.75rem; }
+    .voice-card { background: var(--card-bg); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 1.1rem; transition: all 0.2s; cursor: default; }
+    .voice-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 20px rgba(6,182,212,0.1); }
+    .voice-name { font-weight: 700; font-size: 1rem; margin-bottom: 0.15rem; text-transform: capitalize; }
+    .voice-meta { display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.5rem; }
+    .voice-gender { font-size: 0.75rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 99px; }
+    .voice-gender.female { background: rgba(236,72,153,0.15); color: #f472b6; }
+    .voice-gender.male { background: rgba(59,130,246,0.15); color: #60a5fa; }
+    .voice-id { font-size: 0.75rem; color: var(--text-muted); font-family: monospace; }
+
+    .footer { text-align: center; padding: 3rem 2rem; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 2rem; }
+
+    @media (max-width: 768px) {
+      .hero h2 { font-size: 1.6rem; }
+      .stats { gap: 1.5rem; }
+      .voice-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <h1>SovereignDent <span>AI</span></h1>
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+  </div>
+
+  <div class="hero">
+    <h2>Voice <span>Library</span></h2>
+    <p>54 natural-sounding voices across 10 languages. Every voice is included free with your SovereignDent AI subscription.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">54</div>
+      <div class="stat-label">Natural Voices</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">10</div>
+      <div class="stat-label">Languages</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">33</div>
+      <div class="stat-label">Female Voices</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">21</div>
+      <div class="stat-label">Male Voices</div>
+    </div>
+  </div>
+
+  <div class="filters">
+    <button class="filter-btn active" data-lang="all">All Languages</button>
+    <button class="filter-btn" data-lang="en-us">English (US)</button>
+    <button class="filter-btn" data-lang="en-gb">English (UK)</button>
+    <button class="filter-btn" data-lang="es">Spanish</button>
+    <button class="filter-btn" data-lang="fr">French</button>
+    <button class="filter-btn" data-lang="hi">Hindi</button>
+    <button class="filter-btn" data-lang="it">Italian</button>
+    <button class="filter-btn" data-lang="ja">Japanese</button>
+    <button class="filter-btn" data-lang="pt">Portuguese</button>
+    <button class="filter-btn" data-lang="zh">Mandarin</button>
+  </div>
+
+  <div id="voiceSections">
+    <!-- American English -->
+    <div class="lang-section" data-lang="en-us">
+      <div class="lang-header">
+        <span class="lang-flag">🇺🇸</span>
+        <span class="lang-name">American English</span>
+        <span class="lang-count">20 voices</span>
+      </div>
+      <div class="voice-grid">
+        <div class="voice-card"><div class="voice-name">Alloy</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">af_alloy</span></div></div>
+        <div class="voice-card"><div class="voice-name">Aoede</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">af_aoede</span></div></div>
+        <div class="voice-card"><div class="voice-name">Bella</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">af_bella</span></div></div>
+        <div class="voice-card"><div class="voice-name">Heart</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">af_heart</span></div></div>
+        <div class="voice-card"><div class="voice-name">Jessica</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">af_jessica</span></div></div>
+        <div class="voice-card"><div class="voice-name">Kore</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">af_kore</span></div></div>
+        <div class="voice-card"><div class="voice-name">Nicole</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">af_nicole</span></div></div>
+        <div class="voice-card"><div class="voice-name">Nova</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">af_nova</span></div></div>
+        <div class="voice-card"><div class="voice-name">River</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">af_river</span></div></div>
+        <div class="voice-card"><div class="voice-name">Sarah</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">af_sarah</span></div></div>
+        <div class="voice-card"><div class="voice-name">Sky</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">af_sky</span></div></div>
+        <div class="voice-card"><div class="voice-name">Adam</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">am_adam</span></div></div>
+        <div class="voice-card"><div class="voice-name">Echo</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">am_echo</span></div></div>
+        <div class="voice-card"><div class="voice-name">Eric</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">am_eric</span></div></div>
+        <div class="voice-card"><div class="voice-name">Fenrir</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">am_fenrir</span></div></div>
+        <div class="voice-card"><div class="voice-name">Liam</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">am_liam</span></div></div>
+        <div class="voice-card"><div class="voice-name">Michael</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">am_michael</span></div></div>
+        <div class="voice-card"><div class="voice-name">Onyx</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">am_onyx</span></div></div>
+        <div class="voice-card"><div class="voice-name">Puck</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">am_puck</span></div></div>
+        <div class="voice-card"><div class="voice-name">Santa</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">am_santa</span></div></div>
+      </div>
+    </div>
+
+    <!-- British English -->
+    <div class="lang-section" data-lang="en-gb">
+      <div class="lang-header">
+        <span class="lang-flag">🇬🇧</span>
+        <span class="lang-name">British English</span>
+        <span class="lang-count">8 voices</span>
+      </div>
+      <div class="voice-grid">
+        <div class="voice-card"><div class="voice-name">Alice</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">bf_alice</span></div></div>
+        <div class="voice-card"><div class="voice-name">Emma</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">bf_emma</span></div></div>
+        <div class="voice-card"><div class="voice-name">Isabella</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">bf_isabella</span></div></div>
+        <div class="voice-card"><div class="voice-name">Lily</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">bf_lily</span></div></div>
+        <div class="voice-card"><div class="voice-name">Daniel</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">bm_daniel</span></div></div>
+        <div class="voice-card"><div class="voice-name">Fable</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">bm_fable</span></div></div>
+        <div class="voice-card"><div class="voice-name">George</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">bm_george</span></div></div>
+        <div class="voice-card"><div class="voice-name">Lewis</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">bm_lewis</span></div></div>
+      </div>
+    </div>
+
+    <!-- Spanish -->
+    <div class="lang-section" data-lang="es">
+      <div class="lang-header">
+        <span class="lang-flag">🇪🇸</span>
+        <span class="lang-name">Spanish</span>
+        <span class="lang-count">3 voices</span>
+      </div>
+      <div class="voice-grid">
+        <div class="voice-card"><div class="voice-name">Dora</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">ef_dora</span></div></div>
+        <div class="voice-card"><div class="voice-name">Alex</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">em_alex</span></div></div>
+        <div class="voice-card"><div class="voice-name">Santa</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">em_santa</span></div></div>
+      </div>
+    </div>
+
+    <!-- French -->
+    <div class="lang-section" data-lang="fr">
+      <div class="lang-header">
+        <span class="lang-flag">🇫🇷</span>
+        <span class="lang-name">French</span>
+        <span class="lang-count">1 voice</span>
+      </div>
+      <div class="voice-grid">
+        <div class="voice-card"><div class="voice-name">Siwis</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">ff_siwis</span></div></div>
+      </div>
+    </div>
+
+    <!-- Hindi -->
+    <div class="lang-section" data-lang="hi">
+      <div class="lang-header">
+        <span class="lang-flag">🇮🇳</span>
+        <span class="lang-name">Hindi</span>
+        <span class="lang-count">4 voices</span>
+      </div>
+      <div class="voice-grid">
+        <div class="voice-card"><div class="voice-name">Alpha</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">hf_alpha</span></div></div>
+        <div class="voice-card"><div class="voice-name">Beta</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">hf_beta</span></div></div>
+        <div class="voice-card"><div class="voice-name">Omega</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">hm_omega</span></div></div>
+        <div class="voice-card"><div class="voice-name">Psi</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">hm_psi</span></div></div>
+      </div>
+    </div>
+
+    <!-- Italian -->
+    <div class="lang-section" data-lang="it">
+      <div class="lang-header">
+        <span class="lang-flag">🇮🇹</span>
+        <span class="lang-name">Italian</span>
+        <span class="lang-count">2 voices</span>
+      </div>
+      <div class="voice-grid">
+        <div class="voice-card"><div class="voice-name">Sara</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">if_sara</span></div></div>
+        <div class="voice-card"><div class="voice-name">Nicola</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">im_nicola</span></div></div>
+      </div>
+    </div>
+
+    <!-- Japanese -->
+    <div class="lang-section" data-lang="ja">
+      <div class="lang-header">
+        <span class="lang-flag">🇯🇵</span>
+        <span class="lang-name">Japanese</span>
+        <span class="lang-count">5 voices</span>
+      </div>
+      <div class="voice-grid">
+        <div class="voice-card"><div class="voice-name">Alpha</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">jf_alpha</span></div></div>
+        <div class="voice-card"><div class="voice-name">Gongitsune</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">jf_gongitsune</span></div></div>
+        <div class="voice-card"><div class="voice-name">Nezumi</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">jf_nezumi</span></div></div>
+        <div class="voice-card"><div class="voice-name">Tebukuro</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">jf_tebukuro</span></div></div>
+        <div class="voice-card"><div class="voice-name">Kumo</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">jm_kumo</span></div></div>
+      </div>
+    </div>
+
+    <!-- Portuguese -->
+    <div class="lang-section" data-lang="pt">
+      <div class="lang-header">
+        <span class="lang-flag">🇧🇷</span>
+        <span class="lang-name">Portuguese (Brazilian)</span>
+        <span class="lang-count">3 voices</span>
+      </div>
+      <div class="voice-grid">
+        <div class="voice-card"><div class="voice-name">Dora</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">pf_dora</span></div></div>
+        <div class="voice-card"><div class="voice-name">Alex</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">pm_alex</span></div></div>
+        <div class="voice-card"><div class="voice-name">Santa</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">pm_santa</span></div></div>
+      </div>
+    </div>
+
+    <!-- Mandarin Chinese -->
+    <div class="lang-section" data-lang="zh">
+      <div class="lang-header">
+        <span class="lang-flag">🇨🇳</span>
+        <span class="lang-name">Mandarin Chinese</span>
+        <span class="lang-count">8 voices</span>
+      </div>
+      <div class="voice-grid">
+        <div class="voice-card"><div class="voice-name">Xiaobei</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">zf_xiaobei</span></div></div>
+        <div class="voice-card"><div class="voice-name">Xiaoni</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">zf_xiaoni</span></div></div>
+        <div class="voice-card"><div class="voice-name">Xiaoxiao</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">zf_xiaoxiao</span></div></div>
+        <div class="voice-card"><div class="voice-name">Xiaoyi</div><div class="voice-meta"><span class="voice-gender female">Female</span><span class="voice-id">zf_xiaoyi</span></div></div>
+        <div class="voice-card"><div class="voice-name">Yunjian</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">zm_yunjian</span></div></div>
+        <div class="voice-card"><div class="voice-name">Yunxi</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">zm_yunxi</span></div></div>
+        <div class="voice-card"><div class="voice-name">Yunxia</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">zm_yunxia</span></div></div>
+        <div class="voice-card"><div class="voice-name">Yunyang</div><div class="voice-meta"><span class="voice-gender male">Male</span><span class="voice-id">zm_yunyang</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>All 54 voices are included free with every SovereignDent AI plan. No per-voice fees, no limits.</p>
+    <p style="margin-top:0.5rem;"><a href="index.html">&larr; Back to SovereignDent AI</a></p>
+  </div>
+
+  <script>
+    // Language filter
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const lang = btn.dataset.lang;
+        document.querySelectorAll('.lang-section').forEach(sec => {
+          sec.style.display = (lang === 'all' || sec.dataset.lang === lang) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
