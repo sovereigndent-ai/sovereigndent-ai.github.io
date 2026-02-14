@@ -165,6 +165,7 @@
 
     // Stop any existing playback
     stopPlayback();
+    stopAllConversations();
 
     // Create new audio element
     if (audioSrc) {
@@ -285,55 +286,94 @@
     });
   });
 
-  // --- Conversation Demo Players ---
+  // --- Conversation Demo Players (real audio) ---
   var conversationPlayers = document.querySelectorAll('.conversation-player');
+  var activeConversationAudio = null;
+
+  function formatTime(seconds) {
+    var s = Math.round(seconds);
+    var m = Math.floor(s / 60);
+    s = s % 60;
+    return m + ':' + (s < 10 ? '0' : '') + s;
+  }
+
+  function stopAllConversations() {
+    conversationPlayers.forEach(function (p) {
+      var btn = p.querySelector('.conversation-play-btn');
+      var bar = p.querySelector('.conversation-progress-bar');
+      if (btn) btn.innerHTML = '&#9654;';
+      if (bar) bar.style.width = '0%';
+    });
+    if (activeConversationAudio) {
+      activeConversationAudio.pause();
+      activeConversationAudio.currentTime = 0;
+      activeConversationAudio = null;
+    }
+  }
+
   conversationPlayers.forEach(function (player) {
     var playBtn = player.querySelector('.conversation-play-btn');
     var progressBar = player.querySelector('.conversation-progress-bar');
     var timeDisplay = player.querySelector('.conversation-time');
-    var duration = parseInt(player.getAttribute('data-duration') || '60', 10);
-    var isPlaying = false;
-    var progress = 0;
-    var interval = null;
+    var audioSrc = player.getAttribute('data-audio');
+    var fallbackDuration = parseInt(player.getAttribute('data-duration') || '60', 10);
+    var audio = null;
+    var animFrame = null;
 
-    function formatTime(seconds) {
-      var m = Math.floor(seconds / 60);
-      var s = seconds % 60;
-      return m + ':' + (s < 10 ? '0' : '') + s;
+    if (timeDisplay) timeDisplay.textContent = formatTime(fallbackDuration);
+
+    function updateProgress() {
+      if (!audio || audio.paused) return;
+      var dur = audio.duration || fallbackDuration;
+      var pct = (audio.currentTime / dur) * 100;
+      if (progressBar) progressBar.style.width = pct + '%';
+      if (timeDisplay) timeDisplay.textContent = formatTime(dur - audio.currentTime);
+      animFrame = requestAnimationFrame(updateProgress);
     }
 
-    if (timeDisplay) timeDisplay.textContent = formatTime(duration);
+    function resetPlayer() {
+      if (playBtn) playBtn.innerHTML = '&#9654;';
+      if (progressBar) progressBar.style.width = '0%';
+      var dur = (audio && audio.duration) || fallbackDuration;
+      if (timeDisplay) timeDisplay.textContent = formatTime(dur);
+      if (animFrame) cancelAnimationFrame(animFrame);
+      activeConversationAudio = null;
+    }
 
-    if (playBtn) {
+    if (playBtn && audioSrc) {
       playBtn.addEventListener('click', function () {
-        if (isPlaying) {
-          isPlaying = false;
+        // If this player is currently playing, pause it
+        if (audio && !audio.paused) {
+          audio.pause();
           playBtn.innerHTML = '&#9654;';
-          clearInterval(interval);
-        } else {
-          // Stop all other players first
-          conversationPlayers.forEach(function (p) {
-            var btn = p.querySelector('.conversation-play-btn');
-            if (btn && p !== player) {
-              btn.innerHTML = '&#9654;';
+          if (animFrame) cancelAnimationFrame(animFrame);
+          return;
+        }
+
+        // Stop any other playing conversation and voice player
+        stopAllConversations();
+        stopPlayback();
+
+        // Create audio element if not yet created
+        if (!audio) {
+          audio = new Audio(audioSrc);
+          audio.addEventListener('ended', resetPlayer);
+          audio.addEventListener('loadedmetadata', function () {
+            if (timeDisplay && audio.paused) {
+              timeDisplay.textContent = formatTime(audio.duration);
             }
           });
-
-          isPlaying = true;
-          playBtn.innerHTML = '&#9646;&#9646;';
-          interval = setInterval(function () {
-            progress += 1;
-            if (progress >= duration) {
-              progress = 0;
-              isPlaying = false;
-              playBtn.innerHTML = '&#9654;';
-              clearInterval(interval);
-            }
-            var pct = (progress / duration) * 100;
-            if (progressBar) progressBar.style.width = pct + '%';
-            if (timeDisplay) timeDisplay.textContent = formatTime(duration - progress);
-          }, 1000);
         }
+
+        activeConversationAudio = audio;
+        audio.currentTime = 0;
+        audio.play().then(function () {
+          playBtn.innerHTML = '&#9646;&#9646;';
+          updateProgress();
+        }).catch(function (err) {
+          console.warn('Audio playback failed:', err);
+          resetPlayer();
+        });
       });
     }
   });
