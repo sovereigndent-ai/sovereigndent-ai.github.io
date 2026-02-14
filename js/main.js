@@ -231,7 +231,7 @@
   var priceAmounts = document.querySelectorAll('.pricing-amount');
   var pricePeriods = document.querySelectorAll('.pricing-period');
 
-  // Monthly: $999/mo = $11,988/yr | Annual: $833/mo = $9,996/yr (save $1,992)
+  // Monthly: $299/mo = $3,588/yr | Annual: $249/mo = $2,988/yr (save $600)
   var yearlyNote = document.querySelector('.pricing-yearly-note');
 
   if (pricingSwitch) {
@@ -243,7 +243,7 @@
       priceAmounts.forEach(function (el) {
         var card = el.closest('.pricing-card');
         if (card && !card.classList.contains('pricing-enterprise')) {
-          el.textContent = isAnnual ? '$833' : '$999';
+          el.textContent = isAnnual ? '$249' : '$299';
         }
       });
 
@@ -256,8 +256,8 @@
 
       if (yearlyNote) {
         yearlyNote.textContent = isAnnual
-          ? '$9,996/year — save $1,992 vs monthly'
-          : '$11,988/year at monthly rate';
+          ? '$2,988/year — save $600 vs monthly'
+          : '$3,588/year at monthly rate';
       }
     });
   }
